@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2B6973B1-88C2-45F9-B91C-C47D2D7F1DA3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Residence</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>34BB0680690AD5FD200EEAA3FAA7646BE3D9628D</key>
+		<string>https://github.com/jdye64/residence.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Residence.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>34BB0680690AD5FD200EEAA3FAA7646BE3D9628D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jdye64/residence.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>34BB0680690AD5FD200EEAA3FAA7646BE3D9628D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>34BB0680690AD5FD200EEAA3FAA7646BE3D9628D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>residence</string>
+		</dict>
+	</array>
+</dict>
+</plist>

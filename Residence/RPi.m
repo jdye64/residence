@@ -13,7 +13,7 @@
 -(id)initWithJSON:(NSDictionary *)jsonData {
     self = [super init];
     if (self) {
-        self.uid = jsonData[@"uid"];
+        self.uid = [NSString stringWithFormat:@"%@", jsonData[@"uid"]];
         self.ip = jsonData[@"ip"];
         self.pyObject = jsonData[@"py/object"];
         self.secretKey = jsonData[@"secretKey"];

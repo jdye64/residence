@@ -27,10 +27,21 @@
                                              selector:@selector(dataSourceUpdated:)
                                                  name:@"UPDATED"
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(rpiJoinedSession:)
+                                                 name:RPI_JOINED_NOTIFICATION
+                                               object:nil];
 }
 
 - (void)dataSourceUpdated:(NSNotification *) notification {
     [self.tableView reloadData];
+}
+
+- (void)rpiJoinedSession:(NSNotification *) notification {
+    NSLog(@"New RPI joined the session %@", notification.object);
+    MDWampEvent *event = (MDWampEvent *) notification.object;
+    NSLog(@"Argument 1 %@", event.arguments[0]);
 }
 
 - (void)didReceiveMemoryWarning {
