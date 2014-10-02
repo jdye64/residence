@@ -1,8 +1,8 @@
 //
 //  Outlet.m
-//  Dyer
+//  Residence
 //
-//  Created by Jeremy Dyer on 6/30/14.
+//  Created by Jeremy Dyer on 10/1/14.
 //  Copyright (c) 2014 Jeremy Dyer. All rights reserved.
 //
 
@@ -10,15 +10,34 @@
 
 @implementation Outlet
 
--(id)initWithJSON:(NSDictionary *)json {
+-(id)initWithJSON:(NSDictionary *)jsonData {
     self = [super init];
     if (self) {
-        self.outletId = (NSInteger)[[json objectForKey:@"out_id"] intValue];
-        self.deviceId = (NSInteger)[[json objectForKey:@"dev_id"] intValue];
-        self.gpioPort = (NSInteger)[[json objectForKey:@"gpio_port"] intValue];
-        self.desc = [json objectForKey:@"desc"];
+        
+        NSInteger on = [[jsonData objectForKey:@"on"] integerValue];
+        bool onOff = [[jsonData objectForKey:@"on"] boolValue];
+        
+        NSLog(@"JsonData Value %@, On Value %d onOff Bool Value %d", jsonData[@"on"], on, onOff);
+        if (on == 0) {
+            self.on = 0;
+        } else {
+            self.on = 1;
+        }
+        self.pyObject = jsonData[@"py/object"];
+        self.outletDescription = jsonData[@"outletDescription"];
+        self.portNumber = jsonData[@"portNumber"];
     }
     return self;
+}
+
+-(NSDictionary *)toJson {
+    NSDictionary *json = @{
+                           @"on": self.on ? [NSNumber numberWithInt:1] : [NSNumber numberWithInt:0],
+                           @"portNumber": self.portNumber,
+                           @"outletDescription": self.outletDescription,
+                           @"py/object": self.pyObject
+                           };
+    return json;
 }
 
 @end

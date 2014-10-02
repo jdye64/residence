@@ -10,6 +10,8 @@
 		1901EB6F19DC9CE200ED71EB /* RPi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB6A19DC9CE200ED71EB /* RPi.m */; };
 		1901EB7019DC9CE200ED71EB /* RPiDevicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB6C19DC9CE200ED71EB /* RPiDevicesTableViewController.m */; };
 		1901EB7119DC9CE200ED71EB /* WAMPResidenceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB6E19DC9CE200ED71EB /* WAMPResidenceService.m */; };
+		1901EB7A19DCC17400ED71EB /* DeviceOutletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB7919DCC17400ED71EB /* DeviceOutletTableViewController.m */; };
+		1901EB7D19DCC7D600ED71EB /* Outlet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB7C19DCC7D600ED71EB /* Outlet.m */; };
 		198FEE9319D7334200A5CA01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE9219D7334200A5CA01 /* main.m */; };
 		198FEE9619D7334200A5CA01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE9519D7334200A5CA01 /* AppDelegate.m */; };
 		198FEE9919D7334200A5CA01 /* Residence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE9719D7334200A5CA01 /* Residence.xcdatamodeld */; };
@@ -38,6 +40,10 @@
 		1901EB6C19DC9CE200ED71EB /* RPiDevicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPiDevicesTableViewController.m; sourceTree = "<group>"; };
 		1901EB6D19DC9CE200ED71EB /* WAMPResidenceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMPResidenceService.h; sourceTree = "<group>"; };
 		1901EB6E19DC9CE200ED71EB /* WAMPResidenceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAMPResidenceService.m; sourceTree = "<group>"; };
+		1901EB7819DCC17400ED71EB /* DeviceOutletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceOutletTableViewController.h; sourceTree = "<group>"; };
+		1901EB7919DCC17400ED71EB /* DeviceOutletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceOutletTableViewController.m; sourceTree = "<group>"; };
+		1901EB7B19DCC7D600ED71EB /* Outlet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Outlet.h; sourceTree = "<group>"; };
+		1901EB7C19DCC7D600ED71EB /* Outlet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Outlet.m; sourceTree = "<group>"; };
 		198FEE8D19D7334200A5CA01 /* Residence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Residence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198FEE9119D7334200A5CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198FEE9219D7334200A5CA01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 			children = (
 				1901EB6919DC9CE200ED71EB /* RPi.h */,
 				1901EB6A19DC9CE200ED71EB /* RPi.m */,
+				1901EB7B19DCC7D600ED71EB /* Outlet.h */,
+				1901EB7C19DCC7D600ED71EB /* Outlet.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -95,6 +103,8 @@
 			children = (
 				1901EB6B19DC9CE200ED71EB /* RPiDevicesTableViewController.h */,
 				1901EB6C19DC9CE200ED71EB /* RPiDevicesTableViewController.m */,
+				1901EB7819DCC17400ED71EB /* DeviceOutletTableViewController.h */,
+				1901EB7919DCC17400ED71EB /* DeviceOutletTableViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -305,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1901EB7D19DCC7D600ED71EB /* Outlet.m in Sources */,
+				1901EB7A19DCC17400ED71EB /* DeviceOutletTableViewController.m in Sources */,
 				198FEE9619D7334200A5CA01 /* AppDelegate.m in Sources */,
 				1901EB7119DC9CE200ED71EB /* WAMPResidenceService.m in Sources */,
 				198FEE9919D7334200A5CA01 /* Residence.xcdatamodeld in Sources */,

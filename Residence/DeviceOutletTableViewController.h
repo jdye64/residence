@@ -1,5 +1,5 @@
 //
-//  RPiDevicesTableViewController.h
+//  DeviceOutletTableViewController.h
 //  Residence
 //
 //  Created by Jeremy Dyer on 10/1/14.
@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RPi.h"
 #import "WAMPResidenceService.h"
-#import "DeviceOutletTableViewController.h"
 
-@interface RPiDevicesTableViewController : UITableViewController
+@interface DeviceOutletTableViewController : UITableViewController
+
+@property(nonatomic, strong) NSIndexPath *indexToDisplay;
 
 @end

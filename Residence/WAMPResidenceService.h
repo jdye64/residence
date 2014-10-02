@@ -18,6 +18,11 @@
 
 + (WAMPResidenceService *)sharedInstance;
 
+- (void)updateRPiDevice:(RPi *)rpiDevice;
+
 -(void)disconnectWAMPSession;
+
+-(void)turnOnOutlet:(Outlet *)outlet forRPi:(RPi*) rpi;
+-(void)turnOffOutlet:(Outlet *)outlet forRPi:(RPi*) rpi;
 
 @end

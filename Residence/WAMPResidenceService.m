@@ -65,6 +65,10 @@
                           JSONObjectWithData:jsonData
                           options:kNilOptions
                           error:&error];
+    
+    if (error) {
+        NSLog(@"ERROR creating JSON from WAMP response %@", error.description);
+    }
     return jsonDict;
 }
 
@@ -73,6 +77,16 @@
         RPi *rpi = self.rpiDevices[i];
         if ([rpi.uid isEqualToString:uid]) {
             [self.rpiDevices removeObjectAtIndex:i];
+        }
+    }
+}
+
+-(void)updateRPi:(RPi *)updatedRPi {
+    for (int i = 0; i < [self.rpiDevices count]; i++) {
+        RPi *rpi = self.rpiDevices[i];
+        if ([updatedRPi.uid isEqualToString:rpi.uid]) {
+            [self.rpiDevices replaceObjectAtIndex:i withObject:updatedRPi];
+            //NSLog(@"Replaced RPi %i with updated RPi %d", rpi.on, updatedRPi.on);
         }
     }
 }
@@ -129,54 +143,57 @@
         }
     }];
     
-//    [self.wamp subscribe:@"com.jeremydyer.gpio.rpi.join.notify" onEvent:^(MDWampEvent *payload) {
-//        
-//        // do something with the payload of the event
-//        NSLog(@"received an event %@", payload.arguments);
-//        
-//    } result:^(NSError *error) {
-//        NSLog(@"subscribe ok? %@", (error==nil)?@"YES":@"NO");
-//        
-//        [wamp call:@"com.jeremydyer.gpio.turnon" args:nil kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
-//            if (error== nil) {
-//                // do something with result object
-//                NSLog(@"RPi GPIO outlet has been turned on");
-//            } else {
-//                // handle the error
-//                NSLog(@"ERROR: %@", error);
-//            }
-//        }];
-//        
-//        [wamp call:@"com.jeremydyer.gpio.turnoff" args:nil kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
-//            if (error== nil) {
-//                // do something with result object
-//                NSLog(@"RPi GPIO outlet has been turned off");
-//            } else {
-//                // handle the error
-//                NSLog(@"ERROR: %@", error);
-//            }
-//        }];
-//    }];
-//    
-//    
-//    [self.wamp subscribe:@"com.jeremydyer.gpio.rpi.turnon.notify" onEvent:^(MDWampEvent *payload) {
-//        NSLog(@"Notification that RPi GPIO outlet has been turned ON %@", payload.arguments);
-//    } result:^(NSError *error) {
-//        NSLog(@"subscribe ok? %@", (error==nil)?@"YES":@"NO");
-//    }];
-//    
-//    [self.wamp subscribe:@"com.jeremydyer.gpio.rpi.turnoff.notify" onEvent:^(MDWampEvent *payload) {
-//        NSLog(@"Notification that RPi GPIO outlet has been turned OFF %@", payload.arguments);
-//    } result:^(NSError *error) {
-//        NSLog(@"subscribe ok? %@", (error==nil)?@"YES":@"NO");
-//    }];
-//    
-//    [self.wamp subscribe:@"com.jeremydyer.gpio.rpi.disconnect.notify" onEvent:^(MDWampEvent *payload) {
-//        NSLog(@"RPi device has left the session %@", payload.arguments);
-//    } result:^(NSError *error) {
-//        NSLog(@"subscribe ok? %@", (error==nil)?@"YES":@"NO");
-//    }];
+    
+    //Registers to listen for RPi device updates
+    [self.wamp subscribe:@"com.jeremydyer.residence.rpi.update.notify" onEvent:^(MDWampEvent *payload) {
+        NSLog(@"RPi device update notification has been received!");
+        
+        NSDictionary *jsonDict = [self jsonDictionaryFromString:payload.arguments[0]];
+        RPi *updateRPi = [[RPi alloc] initWithJSON:jsonDict];
+        [self updateRPi:updateRPi];
+        [self notifyDataSourceUpdated];
+        
+    } result:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"ERROR Subscribing to 'com.jeremydyer.residence.rpi.offline' %@", error.description);
+        }
+    }];
+
 }
+
+- (void)updateRPiDevice:(RPi *)rpiDevice {
+    
+    NSArray *args = @[[rpiDevice toJson]];
+    
+    [self.wamp call:rpiDevice.updateDeviceRPC args:args kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
+        if (error != nil) {
+            NSLog(@"ERROR: %@", error);
+        }
+    }];
+}
+
+-(void)turnOnOutlet:(Outlet *)outlet forRPi:(RPi*) rpi {
+    NSArray *args = @[outlet.portNumber];
+    [self.wamp call:rpi.turnOnOutletRPC args:args kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
+        if (error != nil) {
+            NSLog(@"ERROR: %@", error);
+        } else {
+            NSLog(@"Outlet should be turned on now!");
+        }
+    }];
+}
+
+-(void)turnOffOutlet:(Outlet *)outlet forRPi:(RPi*) rpi {
+    NSArray *args = @[outlet.portNumber];
+    [self.wamp call:rpi.turnOffOutletRPC args:args kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
+        if (error != nil) {
+            NSLog(@"ERROR: %@", error);
+        } else {
+            NSLog(@"Outlet should be turned OFF now!");
+        }
+    }];
+}
+
 
 // Called when client disconnect from the server
 - (void) mdwamp:(MDWamp *)wamp closedSession:(NSInteger)code reason:(NSString*)reason details:(NSDictionary *)details {
