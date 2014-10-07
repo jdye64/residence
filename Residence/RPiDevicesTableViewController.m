@@ -72,7 +72,7 @@
     
     RPi *rpi = [[[WAMPResidenceService sharedInstance] rpiDevices] objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = rpi.ip;
+    cell.textLabel.text = [[rpi.location_name stringByAppendingString:@" - "] stringByAppendingString:rpi.room_name];
     
     return cell;
 }

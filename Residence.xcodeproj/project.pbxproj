@@ -12,10 +12,12 @@
 		1901EB7119DC9CE200ED71EB /* WAMPResidenceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB6E19DC9CE200ED71EB /* WAMPResidenceService.m */; };
 		1901EB7A19DCC17400ED71EB /* DeviceOutletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB7919DCC17400ED71EB /* DeviceOutletTableViewController.m */; };
 		1901EB7D19DCC7D600ED71EB /* Outlet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1901EB7C19DCC7D600ED71EB /* Outlet.m */; };
+		193D0F5519E44B210030B45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193D0F5319E44B210030B45F /* Main.storyboard */; };
+		193D0F5819E44BE80030B45F /* WebCamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0F5719E44BE80030B45F /* WebCamTableViewController.m */; };
+		193D0F5B19E46B780030B45F /* WebCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0F5A19E46B780030B45F /* WebCamViewController.m */; };
 		198FEE9319D7334200A5CA01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE9219D7334200A5CA01 /* main.m */; };
 		198FEE9619D7334200A5CA01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE9519D7334200A5CA01 /* AppDelegate.m */; };
 		198FEE9919D7334200A5CA01 /* Residence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE9719D7334200A5CA01 /* Residence.xcdatamodeld */; };
-		198FEE9F19D7334200A5CA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198FEE9D19D7334200A5CA01 /* Main.storyboard */; };
 		198FEEA119D7334200A5CA01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198FEEA019D7334200A5CA01 /* Images.xcassets */; };
 		198FEEA419D7334200A5CA01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198FEEA219D7334200A5CA01 /* LaunchScreen.xib */; };
 		198FEEB019D7334200A5CA01 /* ResidenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 198FEEAF19D7334200A5CA01 /* ResidenceTests.m */; };
@@ -44,19 +46,24 @@
 		1901EB7919DCC17400ED71EB /* DeviceOutletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceOutletTableViewController.m; sourceTree = "<group>"; };
 		1901EB7B19DCC7D600ED71EB /* Outlet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Outlet.h; sourceTree = "<group>"; };
 		1901EB7C19DCC7D600ED71EB /* Outlet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Outlet.m; sourceTree = "<group>"; };
+		193D0F5419E44B210030B45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		193D0F5619E44BE80030B45F /* WebCamTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCamTableViewController.h; sourceTree = "<group>"; };
+		193D0F5719E44BE80030B45F /* WebCamTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebCamTableViewController.m; sourceTree = "<group>"; };
+		193D0F5919E46B780030B45F /* WebCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCamViewController.h; sourceTree = "<group>"; };
+		193D0F5A19E46B780030B45F /* WebCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebCamViewController.m; sourceTree = "<group>"; };
 		198FEE8D19D7334200A5CA01 /* Residence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Residence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198FEE9119D7334200A5CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198FEE9219D7334200A5CA01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		198FEE9419D7334200A5CA01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		198FEE9519D7334200A5CA01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		198FEE9819D7334200A5CA01 /* Residence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Residence.xcdatamodel; sourceTree = "<group>"; };
-		198FEE9E19D7334200A5CA01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		198FEEA019D7334200A5CA01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		198FEEA319D7334200A5CA01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		198FEEA919D7334200A5CA01 /* ResidenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResidenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198FEEAE19D7334200A5CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		198FEEAF19D7334200A5CA01 /* ResidenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResidenceTests.m; sourceTree = "<group>"; };
-		56FD567880784300AD5AEB4A /* Pods-Residence.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Residence.xcconfig"; path = "Pods/Pods-Residence.xcconfig"; sourceTree = "<group>"; };
+		36CBFB81A784C38166F3F341 /* Pods-Residence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Residence.release.xcconfig"; path = "Pods/Target Support Files/Pods-Residence/Pods-Residence.release.xcconfig"; sourceTree = "<group>"; };
+		A180C70D6116DA25BDBFFD21 /* Pods-Residence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Residence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Residence/Pods-Residence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +112,10 @@
 				1901EB6C19DC9CE200ED71EB /* RPiDevicesTableViewController.m */,
 				1901EB7819DCC17400ED71EB /* DeviceOutletTableViewController.h */,
 				1901EB7919DCC17400ED71EB /* DeviceOutletTableViewController.m */,
+				193D0F5619E44BE80030B45F /* WebCamTableViewController.h */,
+				193D0F5719E44BE80030B45F /* WebCamTableViewController.m */,
+				193D0F5919E46B780030B45F /* WebCamViewController.h */,
+				193D0F5A19E46B780030B45F /* WebCamViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -115,8 +126,8 @@
 				198FEE8F19D7334200A5CA01 /* Residence */,
 				198FEEAC19D7334200A5CA01 /* ResidenceTests */,
 				198FEE8E19D7334200A5CA01 /* Products */,
-				56FD567880784300AD5AEB4A /* Pods-Residence.xcconfig */,
 				F898B1FBF3C14CD9828B74D7 /* Frameworks */,
+				90A36A44177C8732A73F920F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,12 +143,12 @@
 		198FEE8F19D7334200A5CA01 /* Residence */ = {
 			isa = PBXGroup;
 			children = (
+				193D0F5319E44B210030B45F /* Main.storyboard */,
 				1901EB7419DC9D9400ED71EB /* controller */,
 				1901EB7319DC9D8C00ED71EB /* service */,
 				1901EB7219DC9D7B00ED71EB /* model */,
 				198FEE9419D7334200A5CA01 /* AppDelegate.h */,
 				198FEE9519D7334200A5CA01 /* AppDelegate.m */,
-				198FEE9D19D7334200A5CA01 /* Main.storyboard */,
 				198FEEA019D7334200A5CA01 /* Images.xcassets */,
 				198FEEA219D7334200A5CA01 /* LaunchScreen.xib */,
 				198FEE9719D7334200A5CA01 /* Residence.xcdatamodeld */,
@@ -170,6 +181,15 @@
 				198FEEAE19D7334200A5CA01 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90A36A44177C8732A73F920F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A180C70D6116DA25BDBFFD21 /* Pods-Residence.debug.xcconfig */,
+				36CBFB81A784C38166F3F341 /* Pods-Residence.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F898B1FBF3C14CD9828B74D7 /* Frameworks */ = {
@@ -262,7 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				198FEE9F19D7334200A5CA01 /* Main.storyboard in Resources */,
+				193D0F5519E44B210030B45F /* Main.storyboard in Resources */,
 				198FEEA419D7334200A5CA01 /* LaunchScreen.xib in Resources */,
 				198FEEA119D7334200A5CA01 /* Images.xcassets in Resources */,
 			);
@@ -290,7 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Residence-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Residence/Pods-Residence-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		74C2E4D865C44ABDB0A99BCF /* Check Pods Manifest.lock */ = {
@@ -321,8 +341,10 @@
 				1901EB7119DC9CE200ED71EB /* WAMPResidenceService.m in Sources */,
 				198FEE9919D7334200A5CA01 /* Residence.xcdatamodeld in Sources */,
 				198FEE9319D7334200A5CA01 /* main.m in Sources */,
+				193D0F5819E44BE80030B45F /* WebCamTableViewController.m in Sources */,
 				1901EB6F19DC9CE200ED71EB /* RPi.m in Sources */,
 				1901EB7019DC9CE200ED71EB /* RPiDevicesTableViewController.m in Sources */,
+				193D0F5B19E46B780030B45F /* WebCamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,10 +367,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		198FEE9D19D7334200A5CA01 /* Main.storyboard */ = {
+		193D0F5319E44B210030B45F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				198FEE9E19D7334200A5CA01 /* Base */,
+				193D0F5419E44B210030B45F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -444,7 +466,7 @@
 		};
 		198FEEB419D7334200A5CA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56FD567880784300AD5AEB4A /* Pods-Residence.xcconfig */;
+			baseConfigurationReference = A180C70D6116DA25BDBFFD21 /* Pods-Residence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Residence/Info.plist;
@@ -455,7 +477,7 @@
 		};
 		198FEEB519D7334200A5CA01 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56FD567880784300AD5AEB4A /* Pods-Residence.xcconfig */;
+			baseConfigurationReference = 36CBFB81A784C38166F3F341 /* Pods-Residence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Residence/Info.plist;

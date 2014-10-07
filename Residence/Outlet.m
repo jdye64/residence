@@ -17,7 +17,7 @@
         NSInteger on = [[jsonData objectForKey:@"on"] integerValue];
         bool onOff = [[jsonData objectForKey:@"on"] boolValue];
         
-        NSLog(@"JsonData Value %@, On Value %d onOff Bool Value %d", jsonData[@"on"], on, onOff);
+        //NSLog(@"JsonData Value %@, On Value %d onOff Bool Value %d", jsonData[@"on"], on, onOff);
         if (on == 0) {
             self.on = 0;
         } else {

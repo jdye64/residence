@@ -8,73 +8,61 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-Residence-CocoaAsyncSocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-Residence-MDWamp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-Residence-MessagePack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-Residence-SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-Residence.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B465DCFE0FA4676BD5E7EBD</key>
+		<key>3745DBD8EA26E5F1535A7E4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C9B76A05E364329A8809049</key>
+		<key>3C9854E74711B44220B07301</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F98AAA1F34B462D8756FB04</key>
+		<key>581A8D798D9AA82FE7246E60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D3162A3FEEA4991BCD0A0E0</key>
+		<key>87716365A825F4DA875BB63C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFB8E6C87EF6404CAE30FF3B</key>
+		<key>E4D7225F8312EAD5260FBB51</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0307FC4533C479089BE98CB</key>
+		<key>E5CC9A27238D09507C66ABDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

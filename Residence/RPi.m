@@ -20,6 +20,14 @@
         self.turnOnOutletRPC = jsonData[@"turnOnOutletRPC"];
         self.turnOffOutletRPC = jsonData[@"turnOffOutletRPC"];
         self.updateDeviceRPC = jsonData[@"updateDeviceRPC"];
+        self.city = jsonData[@"city"];
+        self.state = jsonData[@"state"];
+        self.zip = [jsonData[@"zip"] integerValue];
+        self.address1 = jsonData[@"address1"];
+        self.address2 = jsonData[@"address2"];
+        self.location_name = jsonData[@"location_name"];
+        self.room_name = jsonData[@"room_name"];
+        self.eth0_mac = jsonData[@"eth0_mac"];
         
         self.outlets = [[NSMutableArray alloc] init];
         for (NSDictionary *json in jsonData[@"outlets"]) {
@@ -48,7 +56,15 @@
                            @"turnOffOutletRPC": self.turnOffOutletRPC,
                            @"turnOnOutletRPC": self.turnOnOutletRPC,
                            @"updateDeviceRPC": self.updateDeviceRPC,
-                           @"outlets": outletJson
+                           @"outlets": outletJson,
+                           @"city": self.city,
+                           @"state": self.state,
+                           @"zip": [NSNumber numberWithInteger:self.zip],
+                           @"address1": self.address1,
+                           @"address2": self.address2,
+                           @"location_name": self.location_name,
+                           @"room_name": self.room_name,
+                           @"eth0_mac": self.eth0_mac
                            };
     
     NSError *writeError = nil;

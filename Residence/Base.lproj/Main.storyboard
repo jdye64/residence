@@ -25,7 +25,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jQ-wy-NEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="-1262"/>
+            <point key="canvasLocation" x="-310" y="-1661"/>
         </scene>
         <!--Outlets-->
         <scene sceneID="cea-nZ-n65">
@@ -53,11 +53,11 @@
             </objects>
             <point key="canvasLocation" x="630" y="-1259"/>
         </scene>
-        <!--Item-->
+        <!--Outlets-->
         <scene sceneID="6vu-0F-nDA">
             <objects>
                 <navigationController id="vZS-qe-ysf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pLY-uB-QuA"/>
+                    <tabBarItem key="tabBarItem" title="Outlets" id="pLY-uB-QuA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sbv-mv-pup">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -68,7 +68,61 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeT-kq-yYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-966" y="-1262"/>
+            <point key="canvasLocation" x="-1031" y="-1661"/>
+        </scene>
+        <!--WebCams-->
+        <scene sceneID="NAQ-S1-iGa">
+            <objects>
+                <tableViewController id="Og8-JJ-Nlj" customClass="WebCamTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="06Q-iP-Fkg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x3i-jt-YbW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x3i-jt-YbW" id="ohA-ha-gjL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Og8-JJ-Nlj" id="9lO-5Y-HlS"/>
+                            <outlet property="delegate" destination="Og8-JJ-Nlj" id="BGu-gI-sFH"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="WebCams" id="JTM-Px-ffm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBE-dU-sFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1031" y="-968"/>
+        </scene>
+        <!--Camera Test-->
+        <scene sceneID="srU-BY-6H4">
+            <objects>
+                <viewController id="opS-U3-nBc" customClass="WebCamViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pD9-Af-Ikp"/>
+                        <viewControllerLayoutGuide type="bottom" id="LQ1-RZ-ZoT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="niR-v5-BMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7r-Cc-5Vk">
+                                <rect key="frame" x="78" y="44" width="444" height="351"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera Test" id="Yoa-Mw-YQi"/>
+                    <connections>
+                        <outlet property="imageView" destination="g7r-Cc-5Vk" id="9kV-iY-Qrm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spa-0N-L4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1747" y="-540"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0iV-NS-lrh">
@@ -82,11 +136,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="vZS-qe-ysf" kind="relationship" relationship="viewControllers" id="n7O-el-nSt"/>
+                        <segue destination="Og8-JJ-Nlj" kind="relationship" relationship="viewControllers" id="eyh-0c-BTY"/>
+                        <segue destination="opS-U3-nBc" kind="relationship" relationship="viewControllers" id="q5H-NJ-33d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1d-e6-O98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-229" y="-3"/>
+            <point key="canvasLocation" x="-1777" y="-1262"/>
         </scene>
     </scenes>
 </document>

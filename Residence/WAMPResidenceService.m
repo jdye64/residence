@@ -23,7 +23,7 @@
         self.rpiDevices = [[NSMutableArray alloc] init];
         
         //Create the initial WAMP connection
-        MDWampTransportWebSocket *websocket = [[MDWampTransportWebSocket alloc] initWithServer:[NSURL URLWithString:@"ws://127.0.0.1:8080/ws"] protocolVersions:@[kMDWampProtocolWamp2msgpack, kMDWampProtocolWamp2json]];
+        MDWampTransportWebSocket *websocket = [[MDWampTransportWebSocket alloc] initWithServer:[NSURL URLWithString:@"ws://pi.jeremydyer.me:9000/ws"] protocolVersions:@[kMDWampProtocolWamp2msgpack, kMDWampProtocolWamp2json]];
         
         self.wamp = [[MDWamp alloc] initWithTransport:websocket realm:@"realm1" delegate:self];
         
@@ -98,6 +98,8 @@
     [wamp call:@"com.jeremydyer.residence.rpi.list" args:nil kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
         if (error == nil) {
             NSArray* jsonArray = [self jsonArrayFromString:result.result];
+            
+            //NSLog(@"JSON Array %@", jsonArray);
             
             for (int i = 0; i < [jsonArray count]; i++) {
                 NSDictionary *json = (NSDictionary *) jsonArray[i];
