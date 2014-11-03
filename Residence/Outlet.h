@@ -12,7 +12,7 @@
 
 @property(nonatomic, strong) NSString *pyObject;
 @property(nonatomic, assign) int on;
-@property(nonatomic, strong) NSString *portNumber;
+@property(nonatomic, strong) NSString *outlet;
 @property(nonatomic, strong) NSString *outletDescription;
 
 -(id)initWithJSON:(NSDictionary *)jsonData;

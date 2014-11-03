@@ -22,7 +22,8 @@
         self.updateDeviceRPC = jsonData[@"updateDeviceRPC"];
         self.city = jsonData[@"city"];
         self.state = jsonData[@"state"];
-        self.zip = [jsonData[@"zip"] integerValue];
+        NSLog(@"JSONData Zip: %@", jsonData[@"zip"]);
+        self.zip = !jsonData[@"zip"] ? -1 : [jsonData[@"zip"] integerValue];
         self.address1 = jsonData[@"address1"];
         self.address2 = jsonData[@"address2"];
         self.location_name = jsonData[@"location_name"];
@@ -51,7 +52,6 @@
     NSDictionary *json = @{
                            @"uid": [NSNumber numberWithInteger:[self.uid integerValue]],
                            @"ip": self.ip,
-                           @"py/object": self.pyObject,
                            @"secretKey": self.secretKey,
                            @"turnOffOutletRPC": self.turnOffOutletRPC,
                            @"turnOnOutletRPC": self.turnOnOutletRPC,

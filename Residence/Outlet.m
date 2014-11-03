@@ -25,17 +25,22 @@
         }
         self.pyObject = jsonData[@"py/object"];
         self.outletDescription = jsonData[@"outletDescription"];
-        self.portNumber = jsonData[@"portNumber"];
+        self.outlet = jsonData[@"outlet"];
     }
     return self;
 }
 
 -(NSDictionary *)toJson {
+//    NSDictionary *json = @{
+//                           @"on": self.on ? [NSNumber numberWithInt:1] : [NSNumber numberWithInt:0],
+//                           @"portNumber": self.portNumber,
+//                           @"outletDescription": self.outletDescription,
+//                           @"py/object": self.pyObject
+//                           };
     NSDictionary *json = @{
                            @"on": self.on ? [NSNumber numberWithInt:1] : [NSNumber numberWithInt:0],
-                           @"portNumber": self.portNumber,
-                           @"outletDescription": self.outletDescription,
-                           @"py/object": self.pyObject
+                           @"outlet": self.outlet,
+                           @"outletDescription": self.outletDescription
                            };
     return json;
 }
