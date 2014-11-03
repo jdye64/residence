@@ -22,7 +22,6 @@
         self.updateDeviceRPC = jsonData[@"updateDeviceRPC"];
         self.city = jsonData[@"city"];
         self.state = jsonData[@"state"];
-        NSLog(@"JSONData Zip: %@", jsonData[@"zip"]);
         self.zip = !jsonData[@"zip"] ? -1 : [jsonData[@"zip"] integerValue];
         self.address1 = jsonData[@"address1"];
         self.address2 = jsonData[@"address2"];

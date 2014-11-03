@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0466CE4120FF64555E3A26F0"
+               BlueprintIdentifier = "A92BDF73F378DDC94AB904AE"
                BuildableName = "libPods-Residence-MessagePack.a"
                BlueprintName = "Pods-Residence-MessagePack"
                ReferencedContainer = "container:Pods.xcodeproj">

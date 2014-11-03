@@ -30,14 +30,10 @@
                                                  name:@"UPDATED"
                                                object:nil];
     
-    NSLog(@"RPi devices available %d", [[WAMPResidenceService sharedInstance].rpiDevices count]);
-    NSLog(@"Loading RPi at index %@", self.indexToDisplay);
     self.rpi = [[WAMPResidenceService sharedInstance].rpiDevices objectAtIndex:self.indexToDisplay.row];
 }
 
 - (void)dataSourceUpdated:(NSNotification *) notification {
-    NSLog(@"RPi devices available %d", [[WAMPResidenceService sharedInstance].rpiDevices count]);
-    NSLog(@"Loading RPi at index %@", self.indexToDisplay);
     self.rpi = [[WAMPResidenceService sharedInstance].rpiDevices objectAtIndex:self.indexToDisplay.row];
     [self.tableView reloadData];
 }
@@ -67,8 +63,6 @@
     }
     
     Outlet *outlet = self.rpi.outlets[indexPath.row];
-    
-    NSLog(@"Outlet On Value %d", outlet.on);
     if (outlet.on == 1) {
         cell.backgroundColor = [UIColor redColor];
     } else {
@@ -85,7 +79,6 @@
     Outlet *outlet = self.rpi.outlets[indexPath.row];
     
     //Toggles the on/off value
-    NSLog(@"On was %d", outlet.on);
     outlet.on = !outlet.on;
     
     //Either turns on or off the outlet.
@@ -96,54 +89,8 @@
     }
     
     [self.rpi.outlets replaceObjectAtIndex:indexPath.row withObject:outlet];
-    NSLog(@"On Now is %d", outlet.on);
     
     [[WAMPResidenceService sharedInstance] updateRPiDevice:self.rpi];
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

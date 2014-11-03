@@ -98,9 +98,6 @@
     [wamp call:@"com.jeremydyer.residence.rpi.list" args:nil kwArgs:nil complete:^(MDWampResult *result, NSError *error) {
         if (error == nil) {
             NSArray* jsonArray = [self jsonArrayFromString:result.result];
-            NSLog(@"JSON Data: %@", jsonArray);
-            
-            //NSLog(@"JSON Array %@", jsonArray);
             
             for (int i = 0; i < [jsonArray count]; i++) {
                 NSDictionary *json = (NSDictionary *) jsonArray[i];
